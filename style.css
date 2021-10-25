@@ -1,0 +1,155 @@
+body {
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+  background-image: linear-gradient(120deg, #93b5c6, #c9ccd5);
+  margin: 0;
+  padding: 0;
+}
+.card {
+  margin-top: 1rem;
+}
+.card_item {
+  width: 350px;
+  height: 300px;
+  margin: 2rem auto;
+  text-align: center;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: 0 1rem 2rem white;
+}
+.click {
+  display: inline-block;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  width: 100px;
+  height: 30px;
+}
+
+.click:hover {
+  cursor: pointer;
+  background-color: #ff616d;
+  width: 200px;
+  border: 0;
+  height: 50px;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  width: 150px;
+  height: 30px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #ff616d;
+  width: 200px;
+  border: 0;
+  height: 50px;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(117, 19, 93, 0.73)
+    ),
+    url("./images/nat-4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+section {
+  width: 20rem;
+  height: 20rem;
+  margin: 0 auto;
+  padding: 3px;
+}
+
+.dark-background {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5000;
+  opacity: 0; /*If we just set opacity to zero the content would still be there or text*/
+  visibility: hidden; /*So we need to hide the visibility*/
+  transition: all .3s;
+}
+
+#pop_up:target{
+    opacity: 1;
+    visibility: visible;
+}
+
+.pop_up_close:link, .pop_up_close:visited {
+    color: red;
+    position: absolute;
+    top:1.7rem ;
+    right:1.7rem ;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .4s;
+    line-height: 1;
+}
+
+.pop_up_close:hover{
+    color: green;
+}
+
+/*the code below centers a div within a div as Absolute center*/
+.pop_up_content {
+  /*display:table;*/
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  background-color: white;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/*How to make two boxes side by having the same size*/
+
+.pop_img {
+  display: block;
+  width: 100%;
+}
+
+.pop_left {
+  /*display: table-cell;*/
+  width: 33.333333%;
+}
+
+.pop_right {
+  /*display: table-cell;
+    vertical-align: middle;*/
+  width: 66.6666667%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+}
+/*For the hyphen property to work you must specify in the html tag at that covers the body a lang="en" depending on your country*/
+.pop_text {
+  column-count: 2;
+  column-gap: 1.2rem;
+  column-rule: 1px solid lightcyan;
+
+  hyphens: auto;
+}
